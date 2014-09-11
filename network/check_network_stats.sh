@@ -27,7 +27,7 @@ echo "====="
 echo "Number of SYN requests in progress:"
 netstat -nap | grep SYN | wc -l
 
-# Check for TCP denial of service attacks
+# Check for TCP stats
 echo "====="
 echo "Unique TCP requests currently in progress:"
 netstat -nap | grep 'tcp' | awk '{print $5}' | cut -d: -f1 | sort |uniq -c |sort -n
