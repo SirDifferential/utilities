@@ -17,7 +17,7 @@ echo "====="
 echo "Open file handles that use Apache:"
 lsof -i TCP:80 |wc -l
 
-# check for ICMP SMURF attack. Apparently this is pretty outdated today, but still happens
+# check for ICMP stats
 echo "====="
 echo "Number of ICMP packets received/sent recently:"
 netstat -s| grep -i icmp | egrep 'received|sent'
