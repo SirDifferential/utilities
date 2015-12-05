@@ -1,0 +1,3 @@
+mkdir build
+cmake ..
+make
